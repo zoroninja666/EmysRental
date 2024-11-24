@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Emy's Rental</title>
+</head>
+<body>
+    <div class="container container-fluid mt-3">
+        <button  onclick="myfunc()" ><i class="fa fa-bars"> Details Admin</i></button>
+        <div class="title p-2">
+              <h1>Emy's Rental</h1> 
+        <p>GOWNS AND BARONG AVAILABLE</p>
+        </div>
+    </div>
+<div class="flexy mt-5">
+    <div id="headercontainer">
+        <img class="head head1" src="./img/1.jpg" alt="">
+        <img class="head head2" src="./img/2.jpg" alt="">
+        <img class="head head3" src="./img/3.jpg" alt="">
+        <img class="head head4" src="./img/4.jpg" alt="">
+        <img class="head head5" src="./img/5.jpg" alt="">
+        <img class="head head6" src="./img/6.jpg" alt="">
+    
+      
+    </div>
+    <div class="type">
+        <h1 class=" bg-warning p-2">
+            <a href="" class="typewrite" data-period="2000" 
+            data-type='[ "MURA NA.", "QUALITY PA.", "SAN KAPA?"]'>
+            <span class="wrap"></span>
+            </a>
+        </h1>
+        <hr>
+        <div class="types">
+            <p>
+                "Located To Ds Garcia Near Barangay Hall."
+            </p>
+            <a href="./img/maps.png"> <img src="./img/maps.png" alt="" width="100%" height="250px"></a>
+        </div>
+    </div>
+   
+</div>    
+<hr style=" width: 90%; margin: auto;">
+<!-- second page -->
+
+        <video  autoplay controls>
+            <source src="./img/videow.mp4" type="video/mp4">
+        </video>
+
+<!-- details admin -->
+        <div class="info mb-5" style="visibility: hidden;" id="info">
+            <a href="./img/fb (2).jpg"><img src="./img/fb (1).jpg" alt=""  ></a> <br>
+            <center>
+             
+            <div class="lintik">
+                <p>09358256254</p>
+                 <a class="bg-primary " href="https://www.facebook.com/emelita.molina?mibextid=kFxxJD">visit facebook</a>  
+            </div>
+           
+            <a href="index.html"  class="btn btn-default btn-sm mt-3" ><i class="glyphicon glyphicon-remove"> Back</i></a>
+        </center>
+        </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    
+            function myfunc(){
+                document.getElementById("info").style.visibility = "visible";
+            }
+
+</script>
+
+
+
+
+<script>
+ var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>
+

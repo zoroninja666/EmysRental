@@ -1,0 +1,330 @@
+
+body{
+    background-color: lightgray;
+    
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  .lintik a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+  .info{
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+    width: 80%;
+    height: 800px;
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.info a{
+    text-align: center;
+    margin: auto;
+}
+
+.info img{
+    width: 100%;
+    padding: 10px;
+}
+
+video{
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+.flexy{
+    background-color: white;
+    display: flex;
+}
+.type a{
+    color: black;
+    text-decoration: none;
+
+}
+.type p{
+    text-align: center;
+}
+.type h1{
+    letter-spacing: 5px;
+    text-align: center;
+}
+.type{
+    margin: 10px 80px;
+}
+#headercontainer {
+    margin: 20px;
+    width: 600px;
+    height: 400px;
+    background-color: #A64253;
+    position: relative;
+    box-shadow: 5px 5px 20px black;
+}
+
+.head {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+#arrow {
+    font-size: 6vw;
+}
+
+.head1 {
+    position: relative;
+    animation: head1 9s linear infinite;
+}
+
+.head2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: head2 9s linear infinite;
+}
+
+.head3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: head3 9s linear infinite;
+}
+
+.head4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: head4 9s linear infinite;
+}
+
+.head5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: head5 9s linear infinite;
+}
+
+.head6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: head6 9s linear infinite;
+}
+
+@keyframes head1 {
+    0% {
+        opacity: 1;
+    }
+    10%{
+        opacity: 1;
+    }
+    15%{
+        opacity: 0;
+    }
+    85%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes head2 {
+    0% {
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    15%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes head3 {
+    0% {
+        opacity: 0;
+    }
+    15%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes head4 {
+    0% {
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 1;
+    }
+    55%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes head5 {
+    0% {
+        opacity: 0;
+    }
+    45%{
+        opacity: 0;
+    }
+    55%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+@keyframes head6 {
+    0% {
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    85%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.container button{
+    position: fixed;
+    z-index: 1;
+}
+.container{
+    background-color: gray;
+    left: 2px;
+        top: 2px;
+    height: 120px;
+}
+.container .title{
+    text-align: center;
+    color: pink;
+    
+}
+.title h1{
+    font-size: 50px;
+}
+.title p{
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: white;
+    
+}
+@media all and (max-width: 480px) {
+    video{
+        width: 100%;
+    }
+    .info{
+        margin-top: 40px;
+        height: 320px;
+       
+    }
+    .lintik a{
+        padding: 10px;
+        font-size: 15px;
+         padding-left: 20px;
+         padding-right: 20px;
+    }
+    .flexy{
+        display: contents;
+        justify-content: center;
+        align-items: center;
+    }
+    #headercontainer{
+        width: 90%;
+        height: 300px;
+        
+    }
+    .title{
+        z-index: 1;
+    }
+    .title h1{
+        font-size: 35px;
+    }
+    .title p{
+        font-size: 10px;
+        letter-spacing: 5px;
+        color: white;
+        
+    }
+    .container{
+        height: 100px;
+    }
+    .container button{
+        padding: 5px;
+        font-size: 10px;
+        left: 2px;
+        top: 2px;
+    }
+    .type h1{
+        font-size: 20px;
+       
+    }
+    .type{
+        margin: 20px 20px;
+        
+    }
+  } 
